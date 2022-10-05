@@ -13,71 +13,110 @@
     <header>
       
      
-      <h1 style="text-align: center; color: white; ">The Club Project</h1>
+      <!--navbar using bootstrap-->
      
+    
+      <nav class="navbar navbar-expand-lg bg-primary ">
+        <div class="container-fluid">
+          <a class="navbar-brand; text-white" href="#"><img src="The club project.svg" alt="Logo" width="30" height="24" class="d-inline-block align-text-top">
+            The Club Project </a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+              <li class="nav-item">
+                <a class="nav-link active; text-white" aria-current="page" href="#">Home</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link; text-white" href="#">Link</a>
+              </li>
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle; text-white" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  Dropdown
+                </a>
+                <ul class="dropdown-menu">
+                  <li><a class="dropdown-item" href="#">Action</a></li>
+                  <li><a class="dropdown-item" href="#">Another action</a></li>
+                  <li><hr class="dropdown-divider"></li>
+                  <li><a class="dropdown-item" href="#">Something else here</a></li>
+                </ul>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link disabled; text-white">Disabled</a>
+              </li>
+            </ul>
+            <form class="d-flex" role="search">
+              <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+              <button class="btn btn-outline-success" type="submit">Search</button>
+            </form>
+          </div>
+        </div>
+      </nav>
      
      
     </header>
-    
-    <div >
-   
-     
-      
-      
-      <p ><h3 style="text-align : center; font :larger ;">Activity Of the Month</h3></p>
-      
-      <div class="slideshow-container">
-      
-      <div class="mySlides fade" style="text-align: center;">
-        <div class="numbertext">1 / 3</div>
-        <img src="https://www.mountabuschool.com/wp-content/uploads/media%20club.jpg" style="width: 640px;">
-        <div class="text">Caption Text</div>
+    <br>
+    <!--slideshow using bootstrap-->
+    <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="true">
+      <div class="carousel-indicators">
+        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
+        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
       </div>
-      
-      <div class="mySlides fade"  style="text-align: center;">
-        <div class="numbertext">2 / 3</div>
-        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRbaCo0Ie4CeLEmQaEjhkqWTSm5GWYluL9GO0BW6dowzNmwkFzgbca2R_RQSlv1lW6PxOA&usqp=CAU" style="width:640px ;">
-        <div class="text">Caption Two</div>
+      <div class="carousel-inner">
+        <div class="carousel-item active">
+          <img src="The club project.svg" class="d-block w-100" alt="image1">
+        </div>
+        <div class="carousel-item">
+          <img src="The club project.svg" class="d-block w-100" alt="image2">
+        </div>
+        <div class="carousel-item">
+          <img src="The club project.svg" class="d-block w-100" alt="image3">
+        </div>
       </div>
-      
-      <div class="mySlides fade"  style="text-align: center;">
-        <div class="numbertext">3 / 3</div>
-        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRMEN3fnqin44W2lG1V0FBbIbPuOzkDlAHHDM-JT2KJIvmhUPK578t7n_cWzrr8GhdPEk4&usqp=CAU" style="width:640px  ;">
-        <div class="text">Caption Three</div>
+      <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Previous</span>
+      </button>
+      <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Next</span>
+      </button>
+    </div>
+    <br>
+    <h3 style="text-align: center;">Club-list</h3>
+    <!--This are club cards-->
+
+    <div class="card mb-3" style="max-width: 540px;">
+      <div class="row g-0">
+        <div class="col-md-4">
+          <img src="the club project.svg" class="img-fluid rounded-start" alt="the club project">
+        </div>
+        <div class="col-md-8">
+          <div class="card-body">
+            <h5 class="card-title">Club name</h5>
+            <p class="card-text">This text will indicate small description of club and little more detail</p>
+            <a href="#" class="btn btn-primary">Explore</a>  
+          </div>
+        </div>
       </div>
-      
+    </div>
+    <!--2nd-->
+    <div class="card mb-3" style="max-width: 540px;">
+      <div class="row g-0">
+        <div class="col-md-4">
+          <img src="the club project.svg" class="img-fluid rounded-start" alt="the club project">
+        </div>
+        <div class="col-md-8">
+          <div class="card-body">
+            <h5 class="card-title">Club name</h5>
+            <p class="card-text">This text will indicate small description of club and little more detail</p>
+            <a href="#" class="btn btn-primary">Explore</a>  
+          </div>
+        </div>
       </div>
-      <br>
-      
-      <div style="text-align:center">
-        <span class="dot"></span> 
-        <span class="dot"></span> 
-        <span class="dot"></span> 
-      </div>
-      
-      <script>
-      let slideIndex = 0;
-      showSlides();
-      
-      function showSlides() {
-        let i;
-        let slides = document.getElementsByClassName("mySlides");
-        let dots = document.getElementsByClassName("dot");
-        for (i = 0; i < slides.length; i++) {
-          slides[i].style.display = "none";  
-        }
-        slideIndex++;
-        if (slideIndex > slides.length) {slideIndex = 1}    
-        for (i = 0; i < dots.length; i++) {
-          dots[i].className = dots[i].className.replace(" active", "");
-        }
-        slides[slideIndex-1].style.display = "block";  
-        dots[slideIndex-1].className += " active";
-        setTimeout(showSlides, 2000); // Change image every 2 seconds
-      }
-      </script>
-      </div>
-      
+    </div>
 
 </body>
 </html>

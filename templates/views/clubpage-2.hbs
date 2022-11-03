@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="css" href="indexcss.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+    
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
+    <title>The Club Project</title>
+</head>
+<title>Club Description</title>
+<body style="background-color:rgb(219, 245, 255) ;" >
+    <header>
+      {{>navbar}}
+      </header>
+      <br>
+      <img src="library.jpg" class="rounded mx-auto d-block w-50" alt="...">
+      <div>
+      <h2 class="m-4 d-flex justify-content-center" >The Book Club</h2>
+      <h3 class="ms-5">About Club :</h3>
+      <ul class=" mx-5 ps-5">
+        <li>This is club description </li>
+        <li>Here club Admin will write about club </li>
+        <li>How this club is helpful to its peers </li>
+        <li>how this club will change the culture  </li>
+        <li> what is motto of this club </li>
+      </ul>
+      <h3 class="ms-5">Condtions :</h3>
+      <ul class=" mx-5 ps-5">
+        <li>Tge student to join this club must have to learn programming</li>
+        <li>Student has to be of 3rd sem </li>
+        <li>How this club is helpful to its peers </li>
+        <li>how this club will change the culture  </li>
+        <li> what is motto of this club </li>
+      </ul>
+    </div>
+      <h3 style="text-align: center;"> Club Members</h3>
+      <!--Club member cards-->
+      <div class="row row-cols-3 row-cols-md-6 g-4 d-flex justify-content-center" style="background-color:rgb(219, 245, 255) ;">
+        <div class="col">
+          <div class="card">
+            <img src="The club project.svg" class="card-img-top img-responsive " alt="...">
+            <div class="card-body">
+              <h5 class="card-title">Member-1</h5>
+              <p class="card-text">
+                <ul>
+                  <li>Leader of Club</li>
+                  <li>E-mail : example@xyz.com</li>
+                </ul>
+              </p>
+            </div>
+          </div>
+        </div>
+        <!---->
+        <div class="col">
+          <div class="card">
+            <img src="The club project.svg" class="card-img-top img-responsive"  alt="...">
+            <div class="card-body">
+              <h5 class="card-title">Member-2</h5>
+              <p class="card-text">
+                <ul>
+                  <li>Leader of Club</li>
+                  <li>E-mail : example@xyz.com</li>
+                </ul>
+              </p>
+            </div>
+          </div>
+        </div>
+        <!---->
+        <div class="col">
+          <div class="card">
+            <img src="The club project.svg" class="card-img-top img-responsive " alt="...">
+            <div class="card-body">
+              <h5 class="card-title">Member-3</h5>
+              <p class="card-text">
+                <ul>
+                  <li>Leader of Club</li>
+                  <li>E-mail : example@xyz.com</li>
+                </ul>
+              </p>
+            </div>
+          </div>
+        </div>
+        <!---->
+        <div class="col">
+          <div class="card">
+            <img src="The club project.svg" class="card-img-top img-responsive " alt="...">
+            <div class="card-body">
+              <h5 class="card-title">Member-4</h5>
+              <p class="card-text">
+                <ul>
+                  <li>Leader of Club</li>
+                  <li>E-mail : example@xyz.com</li>
+                </ul>
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+    <!--End of Club members-->
+    <br>
+    <br>
+    <form>
+      <div class="form-group">
+        <div class="text-end me-5 mb-5">
+          <button class="btn btn-primary btn-outline-success text-white btn-lg float-right" href="">
+               Request to Join
+          </button>
+      </div>
+      </div>
+    </form>
+    <!--Footer-->
+    {{>footer}}
+ 
+  </body>
+</html>

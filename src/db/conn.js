@@ -1,11 +1,16 @@
 const mongoose = require("mongoose");
 
-mongoose.connect("URLL" , {
+mongoose.connect("mongodb+srv://sneh:root@cluster0.vtybwdu.mongodb.net/?retryWrites=true&w=majority" , {
     useNewUrlParser: true,
-    useUnifiredTopology: true,
-    useCreateIndex: true
+    // useUnifiredTopology: true,
+    // useCreateIndex: true
 }).then(()=> { 
     console.log('connection successful');
-}).catch(() => {
-    console.log('NO connection');
+}).catch((ERR) => {
+    console.log(ERR);
 })
+
+const contactSchema = {
+    email: String,
+    username: String
+ }; 

@@ -32,6 +32,9 @@
               <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
               <button class="btn btn-outline-success text-white " type="submit">Search</button>
             </form>
+            {{#if login}}
+            <a class="btn text-white btn-outline-success m-lg-2">Log Out</a>
+            {{else}}
             <a class="btn text-white btn-outline-success m-lg-2" href="login.html">Login/Sign up</a>
           </div>
         </div>

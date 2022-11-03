@@ -50,7 +50,7 @@ app.get('/google/callback',
 );
 
 app.get("/successLogin", (req, res)=> {
-    res.send('Hello!' + ${req.user.displayName});
+    res.send('Hello!' /*+ ${req.user.displayName}*/);
 });
 
 app.get("/try_again", (req, res)=> {

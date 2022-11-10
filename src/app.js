@@ -50,8 +50,10 @@ app.get('/google/callback',
 );
 
 app.get("/successLogin", (req, res)=> {
-    res.alert('Hello!'+user.getBasicProfile().getName());
-    res.render('index');
+   // res.alert('Hello!'+user.getBasicProfile().getName());
+    res.render('index',{
+        login: true,
+    });
 });
 
 app.get("/try_again", (req, res)=> {

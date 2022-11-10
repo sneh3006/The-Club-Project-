@@ -58,10 +58,16 @@ if(user.session.isLoggedIn){
 
 app.get("/successLogin", (req, res)=> {
    // res.alert('Hello!'+user.getBasicProfile().getName());
+<<<<<<< HEAD
     // res.render('index',{
     //     login: true
     // });
     res.render('index');
+=======
+    res.render('index',{
+        login: true
+    });
+>>>>>>> b1b2bb584c8c9944ec044d85083e98c347a28421
 });
 
 app.get("/try_again", (req, res)=> {

@@ -90,12 +90,19 @@
     <form>
       <div class="form-group">
         <div class="text-end me-5 mb-5">
-          <button class="btn btn-primary btn-outline-success text-white btn-lg float-right" href="">
+          <button class="btn btn-primary btn-outline-success text-white btn-lg float-right" id="joinbtn" onclick="joined()">
                Request to Join
           </button>
       </div>
       </div>
     </form>
+    <script>
+        function joined()
+        {
+            document.getElementById('joinbtn').className ="btn btn-success btn-outline-primary text-white btn-lg float-right";
+            document.getElementById('joinbtn').textContent ='Joined'
+        }
+    </script>
    {{>footer}}
   </body>
 </html>

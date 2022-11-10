@@ -86,11 +86,23 @@ app.get("/logout", (req, res) => {
 
 app.get("/clubpage-1", (req, res)=> {
     res.render('clubpage-1',{
-        Login : login
+        Login : {login}
     });
 });
 app.get("/clubpage-2", (req, res)=> {
-    res.render('clubpage-2');
+    res.render('clubpage-2',{
+        Login : {login}
+    });
+});
+app.get("/clubpage-3", (req, res)=> {
+    res.render('clubpage-3',{
+        Login : {login}
+    });
+});
+app.get("/clubpage-4", (req, res)=> {
+    res.render('clubpage-4',{
+        Login : {login}
+    });
 });
 
 app.get("/*", (req, res)=> {

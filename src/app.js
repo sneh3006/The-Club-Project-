@@ -12,7 +12,14 @@ require("./db/conn");             //database conn
 
 //function to check if user is logged in
 function isLoggedIn(req, res, next) {
+    //login = true;
     req.user ? next() : res.sendStatus(401);
+}
+
+if(user.session.isLoggedIn){
+    login = true;
+} else {
+    login =  false;
 }
 
 app.use(session({ 
@@ -50,24 +57,12 @@ app.get('/google/callback',
     })
 );
 
-if(user.session.isLoggedIn){
-    login = true;
-} else {
-    login =  false;
-}
-
 app.get("/successLogin", (req, res)=> {
    // res.alert('Hello!'+user.getBasicProfile().getName());
-<<<<<<< HEAD
-    // res.render('index',{
-    //     login: true
-    // });
-    res.render('index');
-=======
-    res.render('index',{
+    /*res.render('index',{
         login: true
-    });
->>>>>>> b1b2bb584c8c9944ec044d85083e98c347a28421
+    });*/
+    res.render('index');
 });
 
 app.get("/try_again", (req, res)=> {

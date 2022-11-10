@@ -5,6 +5,7 @@ const path = require('path');
 const hbs = require('hbs');
 const passport = require("passport");
 const session = require("express-session");
+const login = false;
 
 require('./auth');                //OAuth conn
 require("./db/conn");             //database conn
@@ -49,8 +50,17 @@ app.get('/google/callback',
     })
 );
 
+if(user.session.isLoggedIn){
+    login = true;
+} else {
+    login =  false;
+}
+
 app.get("/successLogin", (req, res)=> {
-    //alert('Hello!'+user.getBasicProfile().getName());
+   // res.alert('Hello!'+user.getBasicProfile().getName());
+    // res.render('index',{
+    //     login: true
+    // });
     res.render('index');
 });
 
@@ -63,9 +73,11 @@ app.get("/login", (req, res)=> {
 });
 
 app.get("/logout", (req, res) => {
-    req.logOut();
+    //req.logOut();
+    req.logout(function(err) {
+        if (err) { return next(err); }
     req.session.destroy();
-    res.send("You're Logged out" )      //temporary
+    res.send("You're Logged out" );      //temporary
     //res.render('logout');            //permanent       
 });
 

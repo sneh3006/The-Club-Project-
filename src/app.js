@@ -45,7 +45,8 @@ app.get('/auth/google',
 app.get('/google/callback', 
     passport.authenticate('google', {
         successRedirect: '/successLogin',
-        failureRedirect: '/try_again'
+        failureRedirect: '/try_again',
+        
     })
 );
 
@@ -71,8 +72,11 @@ app.get("/logout", (req, res) => {
     //res.render('logout');            //permanent       
 });
 
-app.get("/clubpage", (req, res)=> {
+app.get("/clubpage-1", (req, res)=> {
     res.render('clubpage-1');
+});
+app.get("/clubpage-2", (req, res)=> {
+    res.render('clubpage-2');
 });
 
 app.get("/*", (req, res)=> {

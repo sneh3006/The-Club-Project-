@@ -50,7 +50,7 @@ app.get('/google/callback',
 );
 
 app.get("/successLogin", (req, res)=> {
-    window.alert('Hello!'+user.getBasicProfile().getName());
+    //alert('Hello!'+user.getBasicProfile().getName());
     res.render('index');
 });
 

@@ -60,10 +60,10 @@ app.get('/google/callback',
 
 app.get("/successLogin", (req, res)=> {
    // res.alert('Hello!'+user.getBasicProfile().getName());
-    /*res.render('index',{
-        login: true
-    });*/
-    res.render('index');
+    res.render('index',{
+        Login: login
+    });
+    
 });
 
 app.get("/try_again", (req, res)=> {
@@ -84,7 +84,9 @@ app.get("/logout", (req, res) => {
 });
 
 app.get("/clubpage-1", (req, res)=> {
-    res.render('clubpage-1');
+    res.render('clubpage-1',{
+        Login : login
+    });
 });
 app.get("/clubpage-2", (req, res)=> {
     res.render('clubpage-2');
@@ -95,5 +97,4 @@ app.get("/*", (req, res)=> {
 });
 
 app.listen(port, ()=> {
-    console.log("server is running")
-})
+    console.log("server is running")});

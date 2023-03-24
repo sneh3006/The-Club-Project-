@@ -5,14 +5,22 @@ const path = require('path');
 const hbs = require('hbs');
 const passport = require("passport");
 const session = require("express-session");
+const login = false;
 
 require('./auth');                //OAuth conn
 require("./db/conn");             //database conn
 
 //function to check if user is logged in
 function isLoggedIn(req, res, next) {
+    login = true;
     req.user ? next() : res.sendStatus(401);
 }
+
+// if(user.session.isLoggedIn){
+//     login = true;
+// } else {
+//     login =  false;
+// }
 
 app.use(session({ 
     secret: 'lmao',
@@ -45,13 +53,17 @@ app.get('/auth/google',
 app.get('/google/callback', 
     passport.authenticate('google', {
         successRedirect: '/successLogin',
-        failureRedirect: '/try_again'
+        failureRedirect: '/try_again',
+        
     })
 );
 
 app.get("/successLogin", (req, res)=> {
-    res.alert('Hello!'+user.getBasicProfile().getName());
-    res.render('index');
+   // res.alert('Hello!'+user.getBasicProfile().getName());
+    res.render('index',{
+        Login: {login}
+    });
+    
 });
 
 app.get("/try_again", (req, res)=> {
@@ -63,14 +75,34 @@ app.get("/login", (req, res)=> {
 });
 
 app.get("/logout", (req, res) => {
-    req.logOut();
+    //req.logOut();
+    req.logout(function(err) {
+        if (err) { return next(err); }
     req.session.destroy();
-    res.send("You're Logged out" )      //temporary
+    login=false;
+    res.send("You're Logged out" ); })     //temporary
     //res.render('logout');            //permanent       
 });
 
-app.get("/clubpage", (req, res)=> {
-    res.render('clubpage-1');
+app.get("/clubpage-1", (req, res)=> {
+    res.render('clubpage-1',{
+        Login : {login}
+    });
+});
+app.get("/clubpage-2", (req, res)=> {
+    res.render('clubpage-2',{
+        Login : {login}
+    });
+});
+app.get("/clubpage-3", (req, res)=> {
+    res.render('clubpage-3',{
+        Login : {login}
+    });
+});
+app.get("/clubpage-4", (req, res)=> {
+    res.render('clubpage-4',{
+        Login : {login}
+    });
 });
 
 app.get("/*", (req, res)=> {
@@ -78,5 +110,4 @@ app.get("/*", (req, res)=> {
 });
 
 app.listen(port, ()=> {
-    console.log("server is running")
-})
+    console.log("server is running")});

@@ -18,13 +18,24 @@
 <form>
   <div class="form-group">
     <div class="text-end me-5 mb-5">
-      <button class="btn btn-success btn-outline-primary text-white btn-lg float-right" href="">
-           Joined
+      <button class="btn btn-primary btn-outline-success text-white btn-lg float-right" id="joinbtn" onclick="joined()">
+           join
       </button>
   </div>
   </div>
 </form>
-
+<script>
+  function joined()
+  {
+    let btn=document.getElementById('joinbtn');
+    btn.addEventListener('click',joined())
+    function joined()
+    {
+      btn.className="btn btn-success btn-outline-primary text-white btn-lg float-right"
+      btn.textContent='Joined'
+    }
+  }
+</script>
     
 </body>
 </html>

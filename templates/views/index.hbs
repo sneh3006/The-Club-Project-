@@ -1,0 +1,122 @@
+{{>navbar}}
+  <script>!(function () {
+  let e = document.createElement("script"),
+    t = document.head || document.getElementsByTagName("head")[0];
+  (e.src =
+    "https://cdn.jsdelivr.net/npm/rasa-webchat/lib/index.js"),
+    // Replace 1.x.x with the version that you want
+    (e.async = !0),
+    (e.onload = () => {
+      window.WebChat.default(
+        {
+          initPayload: "/greet",
+          customData: { language: "en" },
+          socketUrl: "http://localhost:5005",
+          // add other props here
+        },
+        null
+      );
+    }),
+    t.insertBefore(e, t.firstChild);
+})();
+</script>
+    <br>
+    <!--slideshow using bootstrap-->
+    <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="true" >
+      <div class="carousel-indicators">
+        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
+        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
+      </div>
+      <div class="carousel-inner">
+        <div class="carousel-item active">
+          <img  src="programming.jpg" class="rounded mx-auto d-block w-50" alt="image1" >
+        </div>
+        <div class="carousel-item">
+          <img  src="library.jpg" class="rounded mx-auto d-block w-50 " alt="image2" >
+        </div>
+        <div class="carousel-item">
+          <img  src="football.jpg" class="rounded mx-auto d-block w-50 " alt="image3" >
+        </div>
+      </div>
+      <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Previous</span>
+      </button>
+      <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Next</span>
+      </button>
+    </div>
+    <br>
+    <h3 style="text-align: center;">Club-list</h3>
+  </div>
+    <!--This are club cards-->
+    <div class="row row-cols-1 row-cols-md-2 d-flex justify-content-center">
+    <!--1st-->
+    <div class="card mb-3 mx-3" style="max-width: 540px;">
+      <div class="row g-0">
+        <div class="col-md-4">
+          <img src="the club project.svg" class="img-fluid rounded-start" alt="the club project">
+        </div>
+        <div class="col-md-8">
+          <div class="card-body">
+            <h5 class="card-title">Editing club</h5>
+            <p class="card-text">This text will indicate small description of club and little more detail</p>
+            <a href="/clubpage-1 " class="btn btn-primary">Explore</a>  
+          </div>
+        </div>
+      </div>
+    </div>
+    <!--2nd-->
+    <div class="card mb-3 mx-3" style="max-width: 540px;">
+      <div class="row g-0">
+        <div class="col-md-4">
+          <img src="the club project.svg" class="img-fluid rounded-start" alt="the club project">
+        </div>
+        <div class="col-md-8">
+          <div class="card-body">
+            <h5 class="card-title">Book club</h5>
+            <p class="card-text">This text will indicate small description of club and little more detail</p>
+            <a href="/clubpage-2" class="btn btn-primary">Explore</a>  
+          </div>
+        </div>
+      </div>
+    </div>
+    <!--3rd-->
+    <div class="card mb-3 mx-3" style="max-width: 540px;">
+      <div class="row g-0">
+        <div class="col-md-4">
+          <img src="the club project.svg" class="img-fluid rounded-start" alt="the club project">
+        </div>
+        <div class="col-md-8">
+          <div class="card-body">
+            <h5 class="card-title">The football club</h5>
+            <p class="card-text">This text will indicate small description of club and little more detail</p>
+            <a href="/clubpage-3" class="btn btn-primary">Explore</a>  
+          </div>
+        </div>
+      </div>
+    </div>
+    <!--4rth-->
+    <div class="card mb-3 mx-3" style="max-width: 540px;">
+      <div class="row g-0">
+        <div class="col-md-4">
+          <img src="the club project.svg" class="img-fluid rounded-start" alt="the club project" >
+        </div>
+        <div class="col-md-8">
+          <div class="card-body">
+            <h5 class="card-title">The Coding Club</h5>
+            <p class="card-text">This text will indicate small description of club and little more detail</p>
+            <a href="/clubpage-4" class="btn btn-primary">Explore</a>  
+          </div>
+        </div>
+      </div>
+    </div>
+    <!--End of cards -->
+    </div>
+    <br>
+    {{>footer}}
+
+</body>
+</html>
